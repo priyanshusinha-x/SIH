@@ -1,0 +1,27 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env.*
+!.env.example
+
+# Python virtual environments
+VaaniAI_Backend/venv/
+VaaniAI_Backend/santhali_venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local test audio
+*.mp3
+
+# Python virtual environments
+VaaniAI_Backend/venv/
+VaaniAI_Backend/santhali_venv/
+__pycache__/
+*.pyc
+*.mp3
+.env
+
