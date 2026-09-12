@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VaaniSetu | Lesson Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body class="lesson-page">
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="lesson-navbar">
+
+    <a href="dashboard.html" class="lesson-logo">
+        <div class="lesson-logo-icon">a</div>
+
+        <div>
+            <strong>VaaniSetu</strong>
+            <span>Lesson Studio</span>
+        </div>
+    </a>
+
+    <div class="lesson-nav-right">
+
+        <span class="backend-status">
+            <span class="status-dot"></span>
+            Backend Connected
+        </span>
+
+        <a href="dashboard.html" class="back-dashboard">
+            ← Dashboard
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="lesson-container">
+
+    <!-- HEADER -->
+
+    <section class="lesson-header">
+
+        <div>
+
+            <span class="lesson-label">
+                AI LESSON STUDIO
+            </span>
+
+            <h1>
+                Create a Lesson
+                <span>with AI</span>
+            </h1>
+
+            <p>
+                Create simple, bilingual learning material
+                for every student.
+            </p>
+
+        </div>
+
+        <div class="lesson-ai-badge">
+            ✨
+            <span>AI Powered</span>
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         LESSON CREATOR
+    ================================================= -->
+
+    <section class="lesson-workspace">
+
+        <!-- LEFT SIDE -->
+
+        <div class="lesson-input-card">
+
+            <div class="card-heading">
+
+                <div class="card-icon">
+                    📚
+                </div>
+
+                <div>
+                    <h2>Lesson Details</h2>
+                    <p>Tell VaaniSetu what you want to teach.</p>
+                </div>
+
+            </div>
+
+
+            <!-- TOPIC -->
+
+            <div class="lesson-field">
+
+                <label for="lessonTopic">
+                    Lesson Topic
+                </label>
+
+                <input
+                    type="text"
+                    id="lessonTopic"
+                    placeholder="Example: Water Cycle"
+                    maxlength="100"
+                >
+
+            </div>
+
+
+            <!-- GRADE -->
+
+            <div class="lesson-row">
+
+                <div class="lesson-field">
+
+                    <label for="lessonGrade">
+                        Class / Grade
+                    </label>
+
+                    <select id="lessonGrade">
+
+                        <option value="Class 1">
+                            Class 1
+                        </option>
+
+                        <option value="Class 2">
+                            Class 2
+                        </option>
+
+                        <option value="Class 3" selected>
+                            Class 3
+                        </option>
+
+                        <option value="Class 4">
+                            Class 4
+                        </option>
+
+                        <option value="Class 5">
+                            Class 5
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="lesson-field">
+
+                    <label for="lessonSubject">
+                        Subject
+                    </label>
+
+                    <select id="lessonSubject">
+
+                        <option value="Science" selected>
+                            Science
+                        </option>
+
+                        <option value="Mathematics">
+                            Mathematics
+                        </option>
+
+                        <option value="EVS">
+                            Environmental Studies
+                        </option>
+
+                        <option value="English">
+                            English
+                        </option>
+
+                        <option value="Social Studies">
+                            Social Studies
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- LANGUAGE -->
+
+            <div class="language-selection">
+
+                <div class="language-box">
+
+                    <span>
+                        👨‍🏫 Teacher Language
+                    </span>
+
+                    <strong>
+                        Hindi
+                    </strong>
+
+                </div>
+
+                <div class="language-arrow">
+                    →
+                </div>
+
+                <div class="language-box student-lang">
+
+                    <span>
+                        👧 Student Language
+                    </span>
+
+                    <strong>
+                        Santhali
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- GENERATE -->
+
+            <button
+                id="generateLessonButton"
+                class="generate-lesson-btn"
+            >
+                ✨ Generate Lesson
+            </button>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="lesson-output-card">
+
+            <div class="output-heading">
+
+                <div class="card-icon">
+                    🤖
+                </div>
+
+                <div>
+                    <h2>AI Lesson Preview</h2>
+                    <p>Your bilingual lesson will appear here.</p>
+                </div>
+
+            </div>
+
+
+            <div
+                id="lessonOutput"
+                class="lesson-output"
+            >
+
+                <div class="empty-lesson">
+
+                    <div class="empty-icon">
+                        📖
+                    </div>
+
+                    <h3>
+                        Ready to create your lesson
+                    </h3>
+
+                    <p>
+                        Enter a topic and click
+                        <strong>Generate Lesson</strong>.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         FEATURES
+    ================================================= -->
+
+    <section class="lesson-features">
+
+        <div class="feature-card">
+
+            <span>🌐</span>
+
+            <div>
+                <strong>Bilingual</strong>
+                <p>Hindi + Santhali learning content</p>
+            </div>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <span>💡</span>
+
+            <div>
+                <strong>Simple Explanation</strong>
+                <p>Child-friendly language for learners</p>
+            </div>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <span>🎯</span>
+
+            <div>
+                <strong>Learning Example</strong>
+                <p>Practical examples students understand</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         SIH DEMO BANNER
+    ================================================= -->
+
+    <section class="lesson-demo-banner">
+
+        <div>
+
+            <span>SIH DEMO</span>
+
+            <h2>
+                From AI generation to classroom learning.
+            </h2>
+
+            <p>
+                VaaniSetu helps teachers create learning
+                material in the student's mother tongue.
+            </p>
+
+        </div>
+
+        <a
+            href="live-classroom.html"
+            class="demo-banner-btn"
+        >
+            Open Live Classroom →
+        </a>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     SCRIPT
+===================================================== -->
+
+<script>
+
+const generateButton =
+    document.getElementById("generateLessonButton");
+
+const topicInput =
+    document.getElementById("lessonTopic");
+
+const gradeInput =
+    document.getElementById("lessonGrade");
+
+const subjectInput =
+    document.getElementById("lessonSubject");
+
+const lessonOutput =
+    document.getElementById("lessonOutput");
+
+
+/* =====================================================
+   GENERATE LESSON
+===================================================== */
+
+generateButton.addEventListener(
+    "click",
+    async function () {
+
+        const topic =
+            topicInput.value.trim();
+
+        const grade =
+            gradeInput.value;
+
+        const subject =
+            subjectInput.value;
+
+
+        if (!topic) {
+
+            topicInput.focus();
+
+            lessonOutput.innerHTML = `
+                <div class="lesson-error">
+                    ⚠️ Please enter a lesson topic first.
+                </div>
+            `;
+
+            return;
+        }
+
+
+        /* LOADING */
+
+        generateButton.disabled = true;
+
+        generateButton.innerHTML =
+            "⏳ Creating Lesson...";
+
+        lessonOutput.innerHTML = `
+            <div class="lesson-loading">
+
+                <div class="loading-spinner">
+                    ✨
+                </div>
+
+                <h3>
+                    VaaniAI is creating your lesson...
+                </h3>
+
+                <p>
+                    Understanding the topic,
+                    simplifying the concept and
+                    preparing bilingual content.
+                </p>
+
+            </div>
+        `;
+
+
+        try {
+
+            /* =================================================
+               STEP 1 — CREATE SIMPLE HINDI EXPLANATION
+            ================================================= */
+
+            const hindiPrompt = `
+Explain the following school lesson topic for a primary
+school student.
+
+Topic: ${topic}
+Class: ${grade}
+Subject: ${subject}
+
+Give:
+1. A simple Hindi explanation
+2. One practical example
+
+Use very easy child-friendly Hindi.
+Do not translate the instructions.
+Focus only on the topic.
+`;
+
+
+            const hindiResponse =
+                await fetch(
+                    "http://127.0.0.1:8000/api/process",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body: JSON.stringify({
+
+                            text: hindiPrompt,
+
+                            source_language:
+                                "Hindi",
+
+                            target_language:
+                                "Hindi",
+
+                            language:
+                                "Hindi"
+
+                        })
+                    }
+                );
+
+
+            if (!hindiResponse.ok) {
+
+                throw new Error(
+                    "Hindi AI request failed: " +
+                    hindiResponse.status
+                );
+
+            }
+
+
+            const hindiData =
+                await hindiResponse.json();
+
+
+            const hindiExplanation =
+                hindiData.simple_explanation ||
+                hindiData.answer ||
+                "";
+
+
+            const hindiExample =
+                hindiData.example ||
+                "";
+
+
+            /* =================================================
+               STEP 2 — TRANSLATE HINDI EXPLANATION TO SANTHALI
+            ================================================= */
+
+            const santhaliText =
+    `Translate the following Hindi educational explanation directly into Santhali.
+
+Hindi text:
+${hindiExplanation || topic}
+
+IMPORTANT:
+- Return ONLY the Santhali translation.
+- Do not explain the topic.
+- Do not summarize it.
+- Keep the original meaning.
+- Use natural Santhali suitable for primary school students.`;
+
+
+            const santhaliResponse =
+                await fetch(
+                    "http://127.0.0.1:8000/api/process",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body: JSON.stringify({
+
+                            text:
+                                santhaliText,
+
+                            source_language:
+                                "Hindi",
+
+                            target_language:
+                                "Santhali",
+
+                            language:
+                                "Santhali"
+
+                        })
+                    }
+                );
+
+
+            if (!santhaliResponse.ok) {
+
+                throw new Error(
+                    "Santhali AI request failed: " +
+                    santhaliResponse.status
+                );
+
+            }
+
+
+            const santhaliData =
+                await santhaliResponse.json();
+
+
+            const santhaliTranslation =
+    santhaliData.translation ||
+    santhaliData.answer ||
+    santhaliData.simple_explanation ||
+    "Santhali translation unavailable.";
+
+
+            /* =================================================
+               STEP 3 — SHOW LESSON
+            ================================================= */
+
+            lessonOutput.innerHTML = `
+
+                <div class="generated-lesson">
+
+
+                    <!-- TITLE -->
+
+                    <div class="generated-title">
+
+                        <span>📘</span>
+
+                        <div>
+
+                            <small>
+                                ${escapeHtml(subject)}
+                                •
+                                ${escapeHtml(grade)}
+                            </small>
+
+                            <h3>
+                                ${escapeHtml(topic)}
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- HINDI -->
+
+                    <div class="lesson-section hindi-section">
+
+                        <span class="section-tag">
+                            🇮🇳 HINDI EXPLANATION
+                        </span>
+
+                        <p>
+                            ${escapeHtml(
+                                hindiExplanation ||
+                                "Hindi explanation unavailable."
+                            )}
+                        </p>
+
+                    </div>
+
+
+                    <!-- SANTHALI -->
+
+                    <div class="lesson-section santhali-section">
+
+                        <span class="section-tag">
+                            🗣️ SANTHALI TRANSLATION
+                        </span>
+
+                        <p>
+                            ${escapeHtml(
+                                santhaliTranslation
+                            )}
+                        </p>
+
+                    </div>
+
+
+                    <!-- EXAMPLE -->
+
+                    <div class="lesson-section">
+
+                        <span class="section-tag">
+                            💡 SIMPLE EXAMPLE
+                        </span>
+
+                        <p>
+                            ${escapeHtml(
+                                hindiExample ||
+                                "Example unavailable."
+                            )}
+                        </p>
+
+                    </div>
+
+
+                    <!-- LEARNING POINTS -->
+
+                    <div class="learning-points">
+
+                        <span class="section-tag">
+                            🎯 LEARNING POINTS
+                        </span>
+
+                        <div class="points">
+
+                            <div>
+                                <b>01</b>
+                                Understand the main idea.
+                            </div>
+
+                            <div>
+                                <b>02</b>
+                                Connect the concept with daily life.
+                            </div>
+
+                            <div>
+                                <b>03</b>
+                                Explain what you learned.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STUDENT QUESTION -->
+
+                    <div class="student-question">
+
+                        <span>❓</span>
+
+                        <div>
+
+                            <small>
+                                ASK THE STUDENT
+                            </small>
+
+                            <strong>
+                                Can you explain
+                                "${escapeHtml(topic)}"
+                                in your own words?
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            `;
+
+
+        } catch (error) {
+
+            console.error(
+                "Lesson generation error:",
+                error
+            );
+
+
+            lessonOutput.innerHTML = `
+
+                <div class="lesson-error">
+
+                    ❌ Could not generate the lesson.
+
+                    <p>
+                        Please make sure the VaaniSetu
+                        backend is running on port 8000.
+                    </p>
+
+                </div>
+
+            `;
+
+        } finally {
+
+            generateButton.disabled = false;
+
+            generateButton.innerHTML =
+                "✨ Generate Lesson";
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   ESCAPE HTML
+===================================================== */
+
+function escapeHtml(value) {
+
+    const div =
+        document.createElement("div");
+
+    div.textContent =
+        value ?? "";
+
+    return div.innerHTML;
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VaaniSetu | Live Classroom</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+
+<body class="live-page">
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <nav class="live-navbar">
+
+        <a href="dashboard.html" class="live-brand">
+
+            <div class="live-logo">
+                व
+            </div>
+
+            <div>
+                <strong>VaaniSetu</strong>
+                <span>Live Classroom</span>
+            </div>
+
+        </a>
+
+
+        <div class="live-nav-right">
+
+            <div class="connection-status">
+                <span></span>
+                Backend Connected
+            </div>
+
+            <a href="dashboard.html" class="back-dashboard">
+                ← Dashboard
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="live-container">
+
+
+        <!-- HEADER -->
+
+        <section class="live-header">
+
+            <div>
+
+                <div class="section-label">
+                    LIVE CLASSROOM
+                </div>
+
+                <h1>
+                    Hindi
+                    <span>→</span>
+                    Santhali
+                </h1>
+
+                <p>
+                    Speak naturally. VaaniSetu translates your
+                    classroom conversation in real time.
+                </p>
+
+            </div>
+
+
+            <div class="live-session">
+
+                <div class="session-dot"></div>
+
+                <div>
+                    <strong>Classroom Session</strong>
+                    <small>Ready to start</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LANGUAGE BAR
+        ================================================== -->
+
+        <section class="language-bar">
+
+            <div class="language-pill">
+
+                <span class="pill-icon">
+                    IN
+                </span>
+
+                <div>
+                    <small>TEACHER</small>
+                    <strong>Hindi</strong>
+                </div>
+
+            </div>
+
+
+            <div class="language-flow">
+                →
+            </div>
+
+
+            <div class="language-pill">
+
+                <span class="pill-icon">
+                    🗣️
+                </span>
+
+                <div>
+                    <small>STUDENTS</small>
+                    <strong>Santhali</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CLASSROOM WORKSPACE
+        ================================================== -->
+
+        <section class="classroom-workspace">
+
+
+            <!-- TEACHER PANEL -->
+
+            <div class="classroom-panel teacher-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            TEACHER
+                        </span>
+
+                        <h2>
+                            Speak in Hindi
+                        </h2>
+
+                    </div>
+
+                    <div class="panel-language">
+                        हिन्दी
+                    </div>
+
+                </div>
+
+
+                <!-- MIC -->
+
+                <div class="mic-area">
+
+                    <button
+                        id="liveMicButton"
+                        class="live-mic-button"
+                        type="button"
+                    >
+
+                        <span class="mic-symbol">
+                            🎙️
+                        </span>
+
+                        <span id="micButtonText">
+                            Start Speaking
+                        </span>
+
+                    </button>
+
+
+                    <p id="micStatus">
+                        Click the microphone and speak.
+                    </p>
+
+                </div>
+
+
+                <!-- TRANSCRIPT -->
+
+                <div class="conversation-box">
+
+                    <div class="conversation-title">
+                        <span>📝</span>
+                        Live Transcript
+                    </div>
+
+                    <div
+                        id="liveTranscript"
+                        class="conversation-text empty"
+                    >
+                        Your Hindi speech will appear here...
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- AI FLOW -->
+
+            <div class="ai-flow-column">
+
+                <div class="ai-flow-line"></div>
+
+                <div
+                    id="aiProcessing"
+                    class="ai-processing-box"
+                >
+
+                    <div class="ai-orb">
+                        AI
+                    </div>
+
+                    <strong>
+                        VaaniAI
+                    </strong>
+
+                    <span id="aiStatus">
+                        Waiting for speech
+                    </span>
+
+                </div>
+
+                <div class="ai-flow-line"></div>
+
+            </div>
+
+
+
+            <!-- STUDENT PANEL -->
+
+            <div class="classroom-panel student-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            STUDENTS
+                        </span>
+
+                        <h2>
+                            Listen in Santhali
+                        </h2>
+
+                    </div>
+
+                    <div class="panel-language">
+                        ᱥᱟᱱᱛᱟᱲᱤ
+                    </div>
+
+                </div>
+
+
+                <!-- TRANSLATION -->
+
+                <div class="translation-box">
+
+                    <div class="conversation-title">
+                        <span>🌐</span>
+                        Santhali Translation
+                    </div>
+
+                    <div
+                        id="liveTranslation"
+                        class="conversation-text empty"
+                    >
+                        Translation will appear here...
+                    </div>
+
+                </div>
+
+
+                <!-- SPEAKER -->
+
+                <button
+                    id="liveSpeakerButton"
+                    class="live-speaker-button"
+                    type="button"
+                    disabled
+                >
+
+                    <span>
+                        🔊
+                    </span>
+
+                    <span>
+                        Play Translation
+                    </span>
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             AI UNDERSTANDING
+        ================================================== -->
+
+        <section
+            id="aiUnderstanding"
+            class="understanding-card"
+        >
+
+            <div class="understanding-icon">
+                ✨
+            </div>
+
+            <div>
+
+                <span>
+                    AI UNDERSTANDING
+                </span>
+
+                <h3>
+                    Waiting for classroom input
+                </h3>
+
+                <p>
+                    VaaniAI will provide a simple,
+                    student-friendly explanation here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SESSION INFO
+        ================================================== -->
+
+        <section class="session-info-grid">
+
+
+            <div class="session-info-card">
+
+                <span>LANGUAGE PAIR</span>
+
+                <strong>
+                    Hindi → Santhali
+                </strong>
+
+            </div>
+
+
+            <div class="session-info-card">
+
+                <span>MODE</span>
+
+                <strong>
+                    Real-time Voice
+                </strong>
+
+            </div>
+
+
+            <div class="session-info-card">
+
+                <span>SESSION STATUS</span>
+
+                <strong id="sessionStatus">
+                    Ready
+                </strong>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             DEMO CONTROLS
+        ================================================== -->
+
+        <section class="demo-footer">
+
+            <div>
+
+                <strong>
+                    SIH Demo Flow
+                </strong>
+
+                <p>
+                    Teacher speaks → AI understands →
+                    Santhali translation → Student listens
+                </p>
+
+            </div>
+
+
+            <a
+                href="dashboard.html"
+                class="exit-button"
+            >
+                Exit Classroom
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        const micButton =
+            document.getElementById("liveMicButton");
+
+        const micButtonText =
+            document.getElementById("micButtonText");
+
+        const micStatus =
+            document.getElementById("micStatus");
+
+        const liveTranscript =
+            document.getElementById("liveTranscript");
+
+        const liveTranslation =
+            document.getElementById("liveTranslation");
+
+        const aiStatus =
+            document.getElementById("aiStatus");
+
+        const aiUnderstanding =
+            document.getElementById("aiUnderstanding");
+
+        const liveSpeakerButton =
+            document.getElementById("liveSpeakerButton");
+
+        const sessionStatus =
+            document.getElementById("sessionStatus");
+
+
+        let mediaRecorder = null;
+        let audioChunks = [];
+        let isRecording = false;
+        let lastTranslation = "";
+
+
+        /* =================================================
+           MICROPHONE
+        ================================================== */
+
+        micButton.addEventListener(
+            "click",
+            async function () {
+
+                if (isRecording) {
+
+                    mediaRecorder.stop();
+
+                    return;
+                }
+
+
+                try {
+
+                    const stream =
+                        await navigator.mediaDevices
+                            .getUserMedia({
+                                audio: true
+                            });
+
+
+                    audioChunks = [];
+
+
+                    let options = {};
+
+                    if (
+                        MediaRecorder.isTypeSupported(
+                            "audio/webm"
+                        )
+                    ) {
+
+                        options.mimeType =
+                            "audio/webm";
+
+                    } else if (
+                        MediaRecorder.isTypeSupported(
+                            "audio/mp4"
+                        )
+                    ) {
+
+                        options.mimeType =
+                            "audio/mp4";
+                    }
+
+
+                    mediaRecorder =
+                        new MediaRecorder(
+                            stream,
+                            options
+                        );
+
+
+                    mediaRecorder.start();
+
+                    isRecording = true;
+
+
+                    micButton.classList.add(
+                        "recording"
+                    );
+
+
+                    micButtonText.textContent =
+                        "Stop Speaking";
+
+                    micStatus.textContent =
+                        "Listening to teacher...";
+
+                    aiStatus.textContent =
+                        "Listening...";
+
+                    sessionStatus.textContent =
+                        "Listening";
+
+
+                    liveTranscript.classList.remove(
+                        "empty"
+                    );
+
+                    liveTranscript.textContent =
+                        "Listening...";
+
+
+                    mediaRecorder.addEventListener(
+                        "dataavailable",
+                        function (event) {
+
+                            if (
+                                event.data &&
+                                event.data.size > 0
+                            ) {
+
+                                audioChunks.push(
+                                    event.data
+                                );
+
+                            }
+
+                        }
+                    );
+
+
+                    mediaRecorder.addEventListener(
+                        "stop",
+                        async function () {
+
+                            stream
+                                .getTracks()
+                                .forEach(
+                                    track =>
+                                        track.stop()
+                                );
+
+
+                            isRecording = false;
+
+                            micButton.classList.remove(
+                                "recording"
+                            );
+
+
+                            micButtonText.textContent =
+                                "Start Speaking";
+
+                            micStatus.textContent =
+                                "Processing your speech...";
+
+                            aiStatus.textContent =
+                                "AI is understanding...";
+
+                            sessionStatus.textContent =
+                                "Processing";
+
+
+                            if (
+                                audioChunks.length === 0
+                            ) {
+
+                                resetMic();
+
+                                return;
+                            }
+
+
+                            const audioBlob =
+                                new Blob(
+                                    audioChunks,
+                                    {
+                                        type:
+                                            mediaRecorder
+                                                .mimeType ||
+                                            "audio/webm"
+                                    }
+                                );
+
+
+                            const formData =
+                                new FormData();
+
+
+                            let filename =
+                                "classroom.webm";
+
+
+                            if (
+                                audioBlob.type.includes(
+                                    "mp4"
+                                )
+                            ) {
+
+                                filename =
+                                    "classroom.mp4";
+                            }
+
+
+                            formData.append(
+                                "file",
+                                audioBlob,
+                                filename
+                            );
+
+
+                            try {
+
+                                const response =
+                                    await fetch(
+                                        "http://127.0.0.1:8000/api/voice?target_language=Santhali",
+                                        {
+                                            method: "POST",
+                                            body: formData
+                                        }
+                                    );
+
+
+                                if (!response.ok) {
+
+                                    const errorText =
+                                        await response.text();
+
+                                    throw new Error(
+                                        errorText
+                                    );
+                                }
+
+
+                                const data =
+                                    await response.json();
+
+
+                                /* TRANSCRIPT */
+
+                                liveTranscript.classList.remove(
+                                    "empty"
+                                );
+
+                                liveTranscript.textContent =
+                                    data.transcript ||
+                                    "No speech detected.";
+
+
+                                /* TRANSLATION */
+
+                                liveTranslation.classList.remove(
+                                    "empty"
+                                );
+
+                                liveTranslation.textContent =
+                                    data.translation ||
+                                    "No translation received.";
+
+
+                                lastTranslation =
+                                    data.translation ||
+                                    "";
+
+
+                                /* AI UNDERSTANDING */
+
+                                aiUnderstanding.innerHTML = `
+
+                                    <div class="understanding-icon">
+                                        ✨
+                                    </div>
+
+                                    <div>
+
+                                        <span>
+                                            AI UNDERSTANDING
+                                        </span>
+
+                                        <h3>
+                                            ${escapeHtml(
+                                                data.simple_explanation ||
+                                                data.answer ||
+                                                "VaaniAI understood the classroom input."
+                                            )}
+                                        </h3>
+
+                                        <p>
+                                            VaaniAI generated a simple
+                                            student-friendly explanation.
+                                        </p>
+
+                                    </div>
+
+                                `;
+
+
+                                aiStatus.textContent =
+                                    "Translation complete";
+
+                                micStatus.textContent =
+                                    "Translation ready.";
+
+                                sessionStatus.textContent =
+                                    "Active";
+
+
+                                /* ENABLE SPEAKER */
+
+                                if (lastTranslation) {
+
+                                    liveSpeakerButton.disabled =
+                                        false;
+
+                                }
+
+
+                            } catch (error) {
+
+                                console.error(
+                                    "Live classroom error:",
+                                    error
+                                );
+
+
+                                liveTranscript.textContent =
+                                    "Could not process the voice.";
+
+
+                                liveTranslation.textContent =
+                                    "Please check that the VaaniSetu backend is running.";
+
+
+                                aiStatus.textContent =
+                                    "Connection error";
+
+                                micStatus.textContent =
+                                    "Please try again.";
+
+                                sessionStatus.textContent =
+                                    "Error";
+
+                            }
+
+                        }
+                    );
+
+
+                } catch (error) {
+
+                    console.error(
+                        "Microphone error:",
+                        error
+                    );
+
+
+                    alert(
+                        "Microphone access was denied or unavailable."
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* =================================================
+           SPEAKER
+        ================================================== */
+
+        liveSpeakerButton.addEventListener(
+            "click",
+            async function () {
+
+                if (!lastTranslation) {
+                    return;
+                }
+
+
+                liveSpeakerButton.classList.add(
+                    "playing"
+                );
+
+
+                liveSpeakerButton.disabled =
+                    true;
+
+
+                try {
+
+                    const response =
+                        await fetch(
+                            "http://127.0.0.1:8000/api/tts",
+                            {
+                                method: "POST",
+
+                                headers: {
+                                    "Content-Type":
+                                        "application/json"
+                                },
+
+                                body:
+                                    JSON.stringify({
+
+                                        text:
+                                            lastTranslation,
+
+                                        language:
+                                            "hi"
+
+                                    })
+                            }
+                        );
+
+
+                    if (!response.ok) {
+
+                        throw new Error(
+                            "TTS request failed"
+                        );
+
+                    }
+
+
+                    const audioBlob =
+                        await response.blob();
+
+
+                    const audioUrl =
+                        URL.createObjectURL(
+                            audioBlob
+                        );
+
+
+                    const audio =
+                        new Audio(audioUrl);
+
+
+                    audio.addEventListener(
+                        "ended",
+                        function () {
+
+                            liveSpeakerButton
+                                .classList
+                                .remove(
+                                    "playing"
+                                );
+
+                            liveSpeakerButton.disabled =
+                                false;
+
+                            URL.revokeObjectURL(
+                                audioUrl
+                            );
+
+                        }
+                    );
+
+
+                    await audio.play();
+
+
+                } catch (error) {
+
+                    console.error(
+                        "TTS error:",
+                        error
+                    );
+
+
+                    liveSpeakerButton
+                        .classList
+                        .remove(
+                            "playing"
+                        );
+
+                    liveSpeakerButton.disabled =
+                        false;
+
+
+                    alert(
+                        "Could not play the translation."
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* =================================================
+           HELPERS
+        ================================================== */
+
+        function resetMic() {
+
+            isRecording = false;
+
+            micButton.classList.remove(
+                "recording"
+            );
+
+            micButtonText.textContent =
+                "Start Speaking";
+
+            micStatus.textContent =
+                "Click the microphone and speak.";
+
+            aiStatus.textContent =
+                "Waiting for speech";
+
+            sessionStatus.textContent =
+                "Ready";
+
+        }
+
+
+        function escapeHtml(value) {
+
+            const div =
+                document.createElement("div");
+
+            div.textContent =
+                value;
+
+            return div.innerHTML;
+
+        }
+
+    </script>
+<!-- =========================
+     STUDENT RESPONSE DEMO
+========================= -->
+
+<section class="student-response-demo">
+
+    <div class="student-demo-header">
+        <span class="demo-label">STUDENT RESPONSE</span>
+
+        <h2>Student Voice → Teacher</h2>
+
+        <p>
+            Simulate a student responding in Santhali.
+            VaaniSetu translates the response back to Hindi.
+        </p>
+    </div>
+
+    <div class="student-response-card">
+
+        <div class="student-language">
+            <div class="response-icon">🗣️</div>
+
+            <div>
+                <span>STUDENT SPEAKS</span>
+                <h3>Santhali</h3>
+            </div>
+        </div>
+
+        <div class="student-response-box">
+            <p id="studentResponseText">
+                Student response will appear here...
+            </p>
+        </div>
+
+        <button
+            id="simulateStudentButton"
+            class="simulate-student-btn"
+        >
+            🎙️ Simulate Student Response
+        </button>
+
+        <div class="teacher-response-box">
+
+            <div class="teacher-response-title">
+                <span>🔄</span>
+                <span>HINDI TRANSLATION</span>
+            </div>
+
+            <p id="studentHindiResult">
+                Hindi translation will appear here...
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     STUDENT RESPONSE SCRIPT
+========================= -->
+
+<script>
+
+/* =========================================================
+   STUDENT RESPONSE → HINDI TRANSLATION
+========================================================= */
+
+const simulateStudentButton =
+    document.getElementById("simulateStudentButton");
+
+const studentResponseText =
+    document.getElementById("studentResponseText");
+
+const studentHindiResult =
+    document.getElementById("studentHindiResult");
+
+
+/* =========================================================
+   SIMULATE STUDENT RESPONSE
+========================================================= */
+
+simulateStudentButton.addEventListener(
+    "click",
+    async function () {
+
+        /* Example Santhali student response */
+        const studentText =
+            "ᱤᱧ ᱵᱩᱡᱷᱟᱹᱣ ᱟᱠᱟᱫᱟ";
+
+
+        /* Show student response */
+        studentResponseText.textContent =
+            studentText;
+
+        /* Loading state */
+        studentHindiResult.textContent =
+            "AI is translating to Hindi...";
+
+        simulateStudentButton.textContent =
+            "⏳ Translating...";
+
+        simulateStudentButton.disabled =
+            true;
+
+
+        try {
+
+            /* =================================================
+               SEND STUDENT RESPONSE TO GROQ BACKEND
+            ================================================= */
+
+            const response =
+                await fetch(
+                    "http://127.0.0.1:8000/api/process",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body: JSON.stringify({
+
+                            text:
+                                studentText,
+
+                            source_language:
+                                "Santhali",
+
+                            target_language:
+                                "Hindi",
+
+                            language:
+                                "Hindi"
+
+                        })
+                    }
+                );
+
+
+            /* =================================================
+               CHECK RESPONSE
+            ================================================= */
+
+            if (!response.ok) {
+
+                const errorText =
+                    await response.text();
+
+                throw new Error(
+                    "Server returned " +
+                    response.status +
+                    ": " +
+                    errorText
+                );
+            }
+
+
+            const data =
+                await response.json();
+
+                console.log("Student AI response:", data);
+
+
+            /* =================================================
+               SHOW REAL AI TRANSLATION
+            ================================================= */
+
+            studentHindiResult.textContent =
+    data.translation ||
+    data.answer ||
+    data.simple_explanation ||
+    "Hindi translation unavailable.";
+
+
+            /* Success */
+            simulateStudentButton.textContent =
+                "✓ Student Response Translated";
+
+
+        } catch (error) {
+
+            console.error(
+                "Student translation error:",
+                error
+            );
+
+
+            studentHindiResult.textContent =
+                "Could not translate student response. Please check the backend.";
+
+
+            simulateStudentButton.textContent =
+                "↻ Try Again";
+
+
+        } finally {
+
+            simulateStudentButton.disabled =
+                false;
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+
+</html>

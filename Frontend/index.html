@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VaaniSetu | Language Bridge</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <a href="#home" class="logo">
+
+            <div class="logo-icon">व</div>
+
+            <div>
+                <h2>VaaniSetu</h2>
+                <span>Language Bridge</span>
+            </div>
+
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#translator">Translator</a>
+            <a href="#languages">Languages</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <a href="login.html" class="start-btn">
+            Login
+        </a>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🌏 Connecting Languages • Connecting People
+            </div>
+
+            <h1>
+                Break the Language Barrier
+                <span>with VaaniSetu</span>
+            </h1>
+
+            <p>
+                VaaniSetu is a digital language bridge designed to
+                connect tribal languages with major Indian languages
+                and make communication easier, accessible and inclusive.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#translator" class="primary-btn">
+                    Start Translating →
+                </a>
+
+                <a href="#about" class="secondary-btn">
+                    Learn More
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO VISUAL -->
+
+        <div class="hero-visual">
+
+            <div class="language-orbit">
+
+                <div class="floating-card card-one">
+
+                    🎙️
+
+                    <div>
+                        <strong>Voice</strong>
+                        <small>Input</small>
+                    </div>
+
+                </div>
+
+
+                <div class="main-circle">
+
+                    <span class="language hindi">
+                        अ
+                    </span>
+
+                    <span class="exchange">
+                        ↔
+                    </span>
+
+                    <span class="language tribal">
+                        क
+                    </span>
+
+                </div>
+
+
+                <div class="floating-card card-two">
+
+                    🌐
+
+                    <div>
+                        <strong>Many</strong>
+                        <small>Languages</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats">
+
+        <div class="stat">
+            <h2>5+</h2>
+            <p>Indian Languages</p>
+        </div>
+
+        <div class="stat">
+            <h2>24/7</h2>
+            <p>Accessible</p>
+        </div>
+
+        <div class="stat">
+            <h2>∞</h2>
+            <p>Communication</p>
+        </div>
+
+        <div class="stat">
+            <h2>1</h2>
+            <p>Connected India</p>
+        </div>
+
+    </section>
+
+
+  <!-- ================= TRANSLATOR ================= -->
+
+<section class="translator-section" id="translator">
+
+    <div class="section-heading">
+
+        <span class="section-tag">
+            TRANSLATION
+        </span>
+
+        <h2>
+            Translate Without
+            <span>Boundaries</span>
+        </h2>
+
+        <p>
+            Select your languages and enter your message below.
+        </p>
+
+    </div>
+
+
+    <div class="translator-box">
+
+
+        <!-- SOURCE LANGUAGE -->
+
+        <div class="translation-card">
+
+            <div class="card-header">
+
+                <label>
+                    From
+                </label>
+
+                <select id="sourceLanguage">
+
+                    <option value="English">English</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="Marathi">Marathi</option>
+                    <option value="Gujarati">Gujarati</option>
+                    <option value="Bengali">Bengali</option>
+                    <option value="Tamil">Tamil</option>
+                    <option value="Telugu">Telugu</option>
+                    <option value="Kannada">Kannada</option>
+                    <option value="Tribal Language">Tribal Language</option>
+
+                </select>
+
+            </div>
+
+
+            <textarea
+                id="inputText"
+                placeholder="Enter text to translate..."
+                maxlength="500"></textarea>
+
+
+            <div class="input-footer">
+
+                <span id="charCount">
+                    0 / 500
+                </span>
+
+                <button
+                    class="icon-btn"
+                    id="micButton"
+                    type="button"
+                    title="Speak">
+
+                    🎙️
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SWAP BUTTON -->
+
+        <button
+            class="swap-btn"
+            id="swapButton"
+            type="button">
+
+            ⇄
+
+        </button>
+
+
+        <!-- TARGET LANGUAGE -->
+
+        <div class="translation-card">
+
+            <div class="card-header">
+
+                <label>
+                    To
+                </label>
+
+                <select id="targetLanguage">
+
+                    <option value="Hindi">Hindi</option>
+                    <option value="English">English</option>
+                    <option value="Marathi">Marathi</option>
+                    <option value="Gujarati">Gujarati</option>
+                    <option value="Bengali">Bengali</option>
+                    <option value="Tamil">Tamil</option>
+                    <option value="Telugu">Telugu</option>
+                    <option value="Kannada">Kannada</option>
+                    <option value="Santhali">Santhali</option>
+
+                </select>
+
+            </div>
+
+
+            <div
+                class="translation-result"
+                id="translationResult">
+
+                Your translation will appear here...
+
+            </div>
+
+
+            <div class="input-footer">
+
+                <span>
+                    Translation
+                </span>
+
+                <button
+                    class="icon-btn"
+                    id="speakerButton"
+                    type="button"
+                    title="Listen">
+
+                    🔊
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- AI EXPLANATION -->
+
+    <div class="ai-results" id="aiResults">
+
+        <div class="ai-result-card">
+
+            <div class="ai-result-icon">
+                💡
+            </div>
+
+            <div>
+
+                <h3>
+                    Simple Explanation
+                </h3>
+
+                <p id="explanationResult">
+                    Your simple explanation will appear here...
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="ai-result-card">
+
+            <div class="ai-result-icon">
+                📚
+            </div>
+
+            <div>
+
+                <h3>
+                    Example
+                </h3>
+
+                <p id="exampleResult">
+                    A simple example will appear here...
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TRANSLATE BUTTON -->
+
+    <button
+        class="translate-btn"
+        id="translateButton"
+        type="button">
+
+        Translate →
+
+    </button>
+
+</section>
+
+    <!-- ================= LANGUAGES ================= -->
+
+    <section class="languages-section" id="languages">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+                SUPPORTED LANGUAGES
+            </span>
+
+            <h2>
+                One Platform,
+                <span>Many Voices</span>
+            </h2>
+
+            <p>
+                Connecting India's linguistic diversity through technology.
+            </p>
+
+        </div>
+
+
+        <div class="language-grid">
+
+
+            <div class="language-card">
+
+                <div class="language-icon">
+                    अ
+                </div>
+
+                <h3>Hindi</h3>
+
+                <p>
+                    हिन्दी
+                </p>
+
+            </div>
+
+
+            <div class="language-card">
+
+                <div class="language-icon">
+                    A
+                </div>
+
+                <h3>English</h3>
+
+                <p>
+                    English
+                </p>
+
+            </div>
+
+
+            <div class="language-card">
+
+                <div class="language-icon">
+                    म
+                </div>
+
+                <h3>Marathi</h3>
+
+                <p>
+                    मराठी
+                </p>
+
+            </div>
+
+
+            <div class="language-card">
+
+                <div class="language-icon">
+                    ગ
+                </div>
+
+                <h3>Gujarati</h3>
+
+                <p>
+                    ગુજરાતી
+                </p>
+
+            </div>
+
+
+            <div class="language-card">
+
+                <div class="language-icon">
+                    গ
+                </div>
+
+                <h3>Bengali</h3>
+
+                <p>
+                    বাংলা
+                </p>
+
+            </div>
+
+
+            <div class="language-card tribal-card">
+
+                <div class="language-icon">
+                    🗣️
+                </div>
+
+                <h3>
+                    Tribal Languages
+                </h3>
+
+                <p>
+                    Preserving Voices
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about-section" id="about">
+
+
+        <div class="about-visual">
+
+            <div class="about-circle">
+
+                <span>
+                    वाणी
+                </span>
+
+                <small>
+                    सेतु
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="section-tag">
+                ABOUT VAANISETU
+            </span>
+
+            <h2>
+                Technology That
+                <span>Connects People</span>
+            </h2>
+
+            <p>
+                India is home to hundreds of languages and dialects.
+                VaaniSetu aims to reduce language barriers and create
+                more inclusive communication using technology.
+            </p>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🎙️
+                </div>
+
+                <div>
+
+                    <h3>
+                        Voice Support
+                    </h3>
+
+                    <p>
+                        Communicate naturally using your voice.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🌐
+                </div>
+
+                <div>
+
+                    <h3>
+                        Multiple Languages
+                    </h3>
+
+                    <p>
+                        Connect different Indian languages.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🤝
+                </div>
+
+                <div>
+
+                    <h3>
+                        Inclusive Communication
+                    </h3>
+
+                    <p>
+                        Giving every voice an opportunity to be heard.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <div>
+
+            <span>
+                BRIDGE THE GAP
+            </span>
+
+            <h2>
+                Every Language Deserves
+                <br>
+                To Be Heard.
+            </h2>
+
+            <p>
+                Building a more connected and inclusive India.
+            </p>
+
+        </div>
+
+
+        <a href="#translator" class="cta-btn">
+            Try VaaniSetu →
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            <div class="logo-icon">
+                व
+            </div>
+
+            <div>
+
+                <h3>
+                    VaaniSetu
+                </h3>
+
+                <p>
+                    Connecting voices. Connecting India.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="created-by">
+
+            <p>
+                Created by
+            </p>
+
+            <h3>
+                Priyanshu Sinha
+            </h3>
+
+            <span>
+                © 2026 VaaniSetu
+            </span>
+
+        </div>
+
+    </footer>
+
+<script>
+
+/* =========================================================
+   VAANISETU AI TRANSLATOR
+========================================================= */
+
+const translateButton =
+    document.getElementById("translateButton");
+
+const inputText =
+    document.getElementById("inputText");
+
+const sourceLanguage =
+    document.getElementById("sourceLanguage");
+
+const targetLanguage =
+    document.getElementById("targetLanguage");
+
+const translationResult =
+    document.getElementById("translationResult");
+
+const explanationResult =
+    document.getElementById("explanationResult");
+
+const exampleResult =
+    document.getElementById("exampleResult");
+
+const charCount =
+    document.getElementById("charCount");
+
+const micButton =
+    document.getElementById("micButton");
+
+const speakerButton =
+    document.getElementById("speakerButton");
+
+const swapButton =
+    document.getElementById("swapButton");
+
+
+/* =========================================================
+   CHARACTER COUNTER
+========================================================= */
+
+inputText.addEventListener("input", function () {
+
+    charCount.textContent =
+        inputText.value.length + " / 500";
+
+});
+
+
+/* =========================================================
+   LANGUAGE CODE
+========================================================= */
+
+function getLanguageCode(language) {
+
+    const lang = language.toLowerCase().trim();
+
+    const languageMap = {
+
+        "english": "en",
+        "en": "en",
+
+        "hindi": "hi",
+        "hi": "hi",
+
+        "bengali": "bn",
+        "bangla": "bn",
+        "bn": "bn",
+
+        "marathi": "mr",
+        "mr": "mr",
+
+        "gujarati": "gu",
+        "gu": "gu",
+
+        "tamil": "ta",
+        "ta": "ta",
+
+        "telugu": "te",
+        "te": "te",
+
+        "kannada": "kn",
+        "kn": "kn"
+
+    };
+
+    return languageMap[lang] || "hi";
+}
+
+
+/* =========================================================
+   TRANSLATE BUTTON
+========================================================= */
+
+translateButton.addEventListener(
+    "click",
+    async function () {
+
+        const text =
+            inputText.value.trim();
+
+        if (!text) {
+
+            translationResult.textContent =
+                "Please enter some text first.";
+
+            explanationResult.textContent = "";
+            exampleResult.textContent = "";
+
+            return;
+        }
+
+        if (text.length > 500) {
+
+            translationResult.textContent =
+                "Please keep your text under 500 characters.";
+
+            return;
+        }
+
+        const source =
+            sourceLanguage.value;
+
+        const target =
+            targetLanguage.value;
+
+
+        /* Loading state */
+
+        translationResult.textContent =
+            "Translating...";
+
+        explanationResult.textContent =
+            "AI is preparing a simple explanation...";
+
+        exampleResult.textContent =
+            "Generating example...";
+
+
+        translationResult.classList.add(
+            "ai-processing"
+        );
+
+        explanationResult.classList.add(
+            "ai-processing"
+        );
+
+        exampleResult.classList.add(
+            "ai-processing"
+        );
+
+
+        try {
+
+            const response =
+                await fetch(
+                    "http://127.0.0.1:8000/api/process",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body: JSON.stringify({
+
+                            text: text,
+
+                            source_language:
+                                source,
+
+                            target_language:
+                                target,
+
+                            language:
+                                target
+
+                        })
+                    }
+                );
+
+
+            if (!response.ok) {
+
+                const errorText =
+                    await response.text();
+
+                throw new Error(
+                    "Server returned " +
+                    response.status +
+                    ": " +
+                    errorText
+                );
+            }
+
+
+            const data =
+                await response.json();
+
+
+            /* Translation */
+
+            translationResult.textContent =
+                data.translation ||
+                "No translation received.";
+
+
+            /* AI explanation + example */
+
+let aiData = data;
+
+/* Sometimes the backend puts the AI response inside data.answer */
+if (typeof data.answer === "string") {
+    try {
+        const parsedAnswer = JSON.parse(data.answer);
+
+        if (parsedAnswer && typeof parsedAnswer === "object") {
+            aiData = {
+                ...data,
+                ...parsedAnswer
+            };
+        }
+    } catch (e) {
+        /* data.answer is normal text, so keep it */
+    }
+}
+
+/* AI explanation */
+explanationResult.textContent =
+    aiData.simple_explanation ||
+    aiData.answer ||
+    "No explanation received.";
+
+/* Example */
+exampleResult.textContent =
+    aiData.example ||
+    "No example available.";
+
+            /* Animation */
+
+            translationResult.classList.remove(
+                "ai-processing"
+            );
+
+            explanationResult.classList.remove(
+                "ai-processing"
+            );
+
+            exampleResult.classList.remove(
+                "ai-processing"
+            );
+
+
+            translationResult.classList.add(
+                "result-show"
+            );
+
+            explanationResult.classList.add(
+                "result-show"
+            );
+
+            exampleResult.classList.add(
+                "result-show"
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                "VaaniSetu error:",
+                error
+            );
+
+
+            translationResult.textContent =
+                "Could not connect to VaaniSetu backend.";
+
+
+            explanationResult.textContent =
+                "Please make sure the FastAPI server is running.";
+
+
+            exampleResult.textContent =
+                "";
+
+
+            translationResult.classList.remove(
+                "ai-processing"
+            );
+
+            explanationResult.classList.remove(
+                "ai-processing"
+            );
+
+            exampleResult.classList.remove(
+                "ai-processing"
+            );
+        }
+
+    }
+);
+
+
+/* =========================================================
+   SWAP LANGUAGES
+========================================================= */
+
+if (swapButton) {
+
+    swapButton.addEventListener(
+        "click",
+        function () {
+
+            const oldSource =
+                sourceLanguage.value;
+
+            const oldTarget =
+                targetLanguage.value;
+
+
+            sourceLanguage.value =
+                oldTarget;
+
+            targetLanguage.value =
+                oldSource;
+
+
+            /* Swap input and translation */
+
+            const oldInput =
+                inputText.value;
+
+            const oldTranslation =
+                translationResult.textContent;
+
+
+            if (
+                oldTranslation &&
+                oldTranslation !==
+                "Your translation will appear here..."
+            ) {
+
+                inputText.value =
+                    oldTranslation;
+
+                translationResult.textContent =
+                    oldInput;
+
+            }
+
+
+            /* Update character count */
+
+            charCount.textContent =
+                inputText.value.length +
+                " / 500";
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   VOICE RECORDING
+========================================================= */
+
+let mediaRecorder = null;
+
+let audioChunks = [];
+
+let isRecording = false;
+
+
+/* =========================================================
+   MICROPHONE BUTTON
+========================================================= */
+
+if (micButton) {
+
+    micButton.addEventListener(
+        "click",
+        async function () {
+
+            /* Stop recording */
+
+            if (isRecording) {
+
+                mediaRecorder.stop();
+
+                isRecording = false;
+
+                micButton.classList.remove(
+                    "recording"
+                );
+
+                micButton.classList.remove(
+                    "listening"
+                );
+
+                return;
+            }
+
+
+            /* Request microphone */
+
+            try {
+
+                const stream =
+                    await navigator.mediaDevices
+                        .getUserMedia({
+                            audio: true
+                        });
+
+
+                audioChunks = [];
+
+
+                /* Choose supported format */
+
+                let options = {};
+
+                if (
+                    MediaRecorder.isTypeSupported(
+                        "audio/webm"
+                    )
+                ) {
+
+                    options.mimeType =
+                        "audio/webm";
+
+                } else if (
+                    MediaRecorder.isTypeSupported(
+                        "audio/mp4"
+                    )
+                ) {
+
+                    options.mimeType =
+                        "audio/mp4";
+
+                }
+
+
+                mediaRecorder =
+                    new MediaRecorder(
+                        stream,
+                        options
+                    );
+
+
+                /* Recording started */
+
+                mediaRecorder.start();
+
+                isRecording = true;
+
+                micButton.classList.add(
+                    "recording"
+                );
+
+                micButton.classList.add(
+                    "listening"
+                );
+
+
+                /* Show status */
+
+                inputText.value =
+                    "Listening...";
+
+                charCount.textContent =
+                    "Listening...";
+
+
+                /* Collect audio */
+
+                mediaRecorder.addEventListener(
+                    "dataavailable",
+                    function (event) {
+
+                        if (
+                            event.data &&
+                            event.data.size > 0
+                        ) {
+
+                            audioChunks.push(
+                                event.data
+                            );
+
+                        }
+
+                    }
+                );
+
+
+                /* Recording stopped */
+
+                mediaRecorder.addEventListener(
+                    "stop",
+                    async function () {
+
+                        stream
+                            .getTracks()
+                            .forEach(
+                                track =>
+                                    track.stop()
+                            );
+
+
+                        micButton.classList.remove(
+                            "recording"
+                        );
+
+                        micButton.classList.remove(
+                            "listening"
+                        );
+
+
+                        if (
+                            audioChunks.length === 0
+                        ) {
+
+                            inputText.value = "";
+
+                            charCount.textContent =
+                                "0 / 500";
+
+                            return;
+                        }
+
+
+                        /* Create audio blob */
+
+                        const audioBlob =
+                            new Blob(
+                                audioChunks,
+                                {
+                                    type:
+                                        mediaRecorder
+                                            .mimeType ||
+                                        "audio/webm"
+                                }
+                            );
+
+
+                        /* Prepare form */
+
+                        const formData =
+                            new FormData();
+
+
+                        let filename =
+                            "recording.webm";
+
+
+                        if (
+                            audioBlob.type.includes(
+                                "mp4"
+                            )
+                        ) {
+
+                            filename =
+                                "recording.mp4";
+
+                        }
+
+
+                        formData.append(
+                            "file",
+                            audioBlob,
+                            filename
+                        );
+
+
+                        /* AI processing */
+
+                        inputText.value =
+                            "Processing voice...";
+
+                        charCount.textContent =
+                            "AI processing...";
+
+
+                        translationResult.textContent =
+                            "Listening and translating...";
+
+                        explanationResult.textContent =
+                            "Preparing explanation...";
+
+                        exampleResult.textContent =
+                            "Preparing example...";
+
+
+                        translationResult.classList.add(
+                            "ai-processing"
+                        );
+
+                        explanationResult.classList.add(
+                            "ai-processing"
+                        );
+
+                        exampleResult.classList.add(
+                            "ai-processing"
+                        );
+
+
+                        try {
+
+                            const target =
+                                targetLanguage.value;
+
+
+                            const response =
+                                await fetch(
+                                    "http://127.0.0.1:8000/api/voice?target_language=" +
+                                    encodeURIComponent(
+                                        target
+                                    ),
+                                    {
+                                        method: "POST",
+
+                                        body:
+                                            formData
+                                    }
+                                );
+
+
+                            if (!response.ok) {
+
+                                const errorText =
+                                    await response.text();
+
+                                throw new Error(
+                                    "Server returned " +
+                                    response.status +
+                                    ": " +
+                                    errorText
+                                );
+
+                            }
+
+
+                            const data =
+                                await response.json();
+
+
+                            /* Put transcript in textbox */
+
+                            inputText.value =
+                                data.transcript ||
+                                "";
+
+
+                            charCount.textContent =
+                                inputText.value.length +
+                                " / 500";
+
+
+                            /* Translation */
+
+                            translationResult.textContent =
+                                data.translation ||
+                                "No translation received.";
+
+
+                            /* Explanation */
+
+                            explanationResult.textContent =
+                                data.simple_explanation ||
+                                data.answer ||
+                                "No explanation received.";
+
+
+                            /* Example */
+
+                            exampleResult.textContent =
+                                data.example ||
+                                "No example available.";
+
+
+                            /* Remove loading */
+
+                            translationResult.classList.remove(
+                                "ai-processing"
+                            );
+
+                            explanationResult.classList.remove(
+                                "ai-processing"
+                            );
+
+                            exampleResult.classList.remove(
+                                "ai-processing"
+                            );
+
+
+                            /* Result animation */
+
+                            translationResult.classList.add(
+                                "result-show"
+                            );
+
+                            explanationResult.classList.add(
+                                "result-show"
+                            );
+
+                            exampleResult.classList.add(
+                                "result-show"
+                            );
+
+
+                        } catch (error) {
+
+                            console.error(
+                                "Voice processing error:",
+                                error
+                            );
+
+
+                            inputText.value =
+                                "";
+
+                            charCount.textContent =
+                                "0 / 500";
+
+
+                            translationResult.textContent =
+                                "Voice processing failed.";
+
+
+                            explanationResult.textContent =
+                                "Please try recording again.";
+
+
+                            exampleResult.textContent =
+                                "";
+
+
+                            translationResult.classList.remove(
+                                "ai-processing"
+                            );
+
+                            explanationResult.classList.remove(
+                                "ai-processing"
+                            );
+
+                            exampleResult.classList.remove(
+                                "ai-processing"
+                            );
+
+                        }
+
+                    }
+                );
+
+
+            } catch (error) {
+
+                console.error(
+                    "Microphone error:",
+                    error
+                );
+
+
+                alert(
+                    "Microphone access was denied or is unavailable."
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   SPEAKER / TEXT TO SPEECH
+========================================================= */
+
+if (speakerButton) {
+
+    speakerButton.addEventListener(
+        "click",
+        async function () {
+
+            const text =
+                translationResult.textContent.trim();
+
+
+            if (
+                !text ||
+                text ===
+                "Your translation will appear here..." ||
+                text ===
+                "No translation received."
+            ) {
+
+                return;
+            }
+
+
+            const language =
+                getLanguageCode(
+                    targetLanguage.value
+                );
+
+
+            speakerButton.classList.add(
+                "playing"
+            );
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        "http://127.0.0.1:8000/api/tts",
+                        {
+                            method: "POST",
+
+                            headers: {
+                                "Content-Type":
+                                    "application/json"
+                            },
+
+                            body:
+                                JSON.stringify({
+
+                                    text: text,
+
+                                    language:
+                                        language
+
+                                })
+                        }
+                    );
+
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        "TTS server returned " +
+                        response.status
+                    );
+
+                }
+
+
+                const audioBlob =
+                    await response.blob();
+
+
+                const audioUrl =
+                    URL.createObjectURL(
+                        audioBlob
+                    );
+
+
+                const audio =
+                    new Audio(
+                        audioUrl
+                    );
+
+
+                audio.addEventListener(
+                    "ended",
+                    function () {
+
+                        speakerButton.classList.remove(
+                            "playing"
+                        );
+
+                        URL.revokeObjectURL(
+                            audioUrl
+                        );
+
+                    }
+                );
+
+
+                audio.addEventListener(
+                    "error",
+                    function () {
+
+                        speakerButton.classList.remove(
+                            "playing"
+                        );
+
+                        URL.revokeObjectURL(
+                            audioUrl
+                        );
+
+                    }
+                );
+
+
+                await audio.play();
+
+
+            } catch (error) {
+
+                console.error(
+                    "TTS error:",
+                    error
+                );
+
+
+                speakerButton.classList.remove(
+                    "playing"
+                );
+
+
+                alert(
+                    "Could not play the voice. Please try again."
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   INITIAL STATE
+========================================================= */
+
+if (charCount) {
+
+    charCount.textContent =
+        inputText.value.length +
+        " / 500";
+
+}
+
+
+/* =========================================================
+   END VAANISETU SCRIPT
+========================================================= */
+
+</script>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VaaniSetu | Teacher Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+
+<body class="dashboard-page">
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <nav class="dashboard-navbar">
+
+        <div class="dashboard-brand">
+
+            <div class="dashboard-logo">
+                व
+            </div>
+
+            <div>
+                <h2>VaaniSetu</h2>
+                <span>Language Bridge</span>
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-user">
+
+            <div class="dashboard-user-info">
+                <strong>Demo Teacher</strong>
+                <span>Teacher</span>
+            </div>
+
+            <div class="dashboard-avatar">
+                DT
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         MAIN DASHBOARD
+    ====================================================== -->
+
+    <main class="dashboard-container">
+
+
+        <!-- =================================================
+             WELCOME
+        ================================================== -->
+
+        <section class="dashboard-welcome">
+
+            <div>
+
+                <div class="section-label">
+                    Teacher Dashboard
+                </div>
+
+                <h1>
+                    Welcome back,
+                    <span>Teacher</span> 👋
+                </h1>
+
+                <p>
+                    Teach without language barriers.
+                    Connect with every learner.
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-status">
+                VaaniSetu connected
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LANGUAGE SETUP
+        ================================================== -->
+
+        <section class="setup-card">
+
+            <div class="section-label">
+                Classroom Language
+            </div>
+
+            <h2 class="section-title">
+                Your Teaching Setup
+            </h2>
+
+
+            <div class="language-setup">
+
+
+                <!-- Teacher -->
+
+                <div class="language-card">
+
+                    <div class="language-icon">
+                        IN
+                    </div>
+
+                    <small>
+                        Teacher Language
+                    </small>
+
+                    <h3>
+                        Hindi
+                    </h3>
+
+                </div>
+
+
+                <!-- Arrow -->
+
+                <div class="language-arrow">
+                    →
+                </div>
+
+
+                <!-- Student -->
+
+                <div class="language-card">
+
+                    <div class="language-icon">
+                        🗣️
+                    </div>
+
+                    <small>
+                        Student Language
+                    </small>
+
+                    <h3>
+                        Santhali
+                    </h3>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STATISTICS
+        ================================================== -->
+
+        <section class="dashboard-stats">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📚
+                </div>
+
+                <h3>
+                    8
+                </h3>
+
+                <p>
+                    Lessons Today
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    👥
+                </div>
+
+                <h3>
+                    32
+                </h3>
+
+                <p>
+                    Students Reached
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🎙️
+                </div>
+
+                <h3>
+                    14
+                </h3>
+
+                <p>
+                    Voice Sessions
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📝
+                </div>
+
+                <h3>
+                    6
+                </h3>
+
+                <p>
+                    Worksheets
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             TEACHING TOOLS
+        ================================================== -->
+
+        <section class="tools-section">
+
+
+            <div class="section-label">
+                Teaching Tools
+            </div>
+
+            <h2 class="section-title">
+                Quick Actions
+            </h2>
+
+
+            <div class="tools-grid">
+
+
+                <!-- Live Classroom -->
+
+                <a
+                    href="live-classroom.html"
+                    class="tool-card live-classroom"
+                    style="text-decoration:none;"
+                >
+
+                    <div class="live-badge">
+                        ● Live Demo
+                    </div>
+
+                    <div class="tool-icon">
+                        🎙️
+                    </div>
+
+                    <h3>
+                        Start Live Classroom
+                    </h3>
+
+                    <p>
+                        Translate your voice in real time
+                        for students.
+                    </p>
+
+                </a>
+
+
+
+                <!-- Lesson -->
+
+                <div
+                    class="tool-card"
+                    onclick="comingSoon('Lesson Studio')"
+                >
+
+                    <div class="tool-icon">
+                        📖
+                    </div>
+
+                    <h3>
+                        Create Lesson
+                    </h3>
+
+                    <p>
+                        Create simple multilingual
+                        lessons with AI assistance.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Worksheet -->
+
+                <div
+                    class="tool-card"
+                    onclick="comingSoon('Worksheet Studio')"
+                >
+
+                    <div class="tool-icon">
+                        📝
+                    </div>
+
+                    <h3>
+                        Generate Worksheet
+                    </h3>
+
+                    <p>
+                        Generate bilingual worksheets
+                        for your classroom.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Flashcards -->
+
+                <div
+                    class="tool-card"
+                    onclick="comingSoon('Flashcards')"
+                >
+
+                    <div class="tool-icon">
+                        🃏
+                    </div>
+
+                    <h3>
+                        Create Flashcards
+                    </h3>
+
+                    <p>
+                        Build visual learning cards
+                        for young learners.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RECENT ACTIVITY
+        ================================================== -->
+
+        <section class="activity-card">
+
+            <div class="section-label">
+                Classroom Activity
+            </div>
+
+            <h2 class="section-title">
+                Recent Activity
+            </h2>
+
+
+            <div class="activity-list">
+
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        🎙️
+                    </div>
+
+                    <div class="activity-info">
+
+                        <strong>
+                            Hindi → Santhali voice session
+                        </strong>
+
+                        <span>
+                            Real-time classroom translation
+                        </span>
+
+                    </div>
+
+                    <div class="activity-time">
+                        Today
+                    </div>
+
+                </div>
+
+
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        📚
+                    </div>
+
+                    <div class="activity-info">
+
+                        <strong>
+                            Mathematics lesson completed
+                        </strong>
+
+                        <span>
+                            12 students participated
+                        </span>
+
+                    </div>
+
+                    <div class="activity-time">
+                        Today
+                    </div>
+
+                </div>
+
+
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        📝
+                    </div>
+
+                    <div class="activity-info">
+
+                        <strong>
+                            Bilingual worksheet generated
+                        </strong>
+
+                        <span>
+                            Hindi + Santhali
+                        </span>
+
+                    </div>
+
+                    <div class="activity-time">
+                        Yesterday
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SIH DEMO
+        ================================================== -->
+
+        <section class="sih-banner">
+
+            <div>
+
+                <h3>
+                    🚀 Ready for the SIH Demo?
+                </h3>
+
+                <p>
+                    Experience the complete
+                    Hindi → Santhali classroom workflow.
+                </p>
+
+            </div>
+
+
+            <a
+               href="live-classroom.html"
+               class="tool-card live-classroom"
+            >
+                Launch Demo
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        function comingSoon(feature) {
+
+            alert(
+                feature +
+                " will be available in the next VaaniSetu module."
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>
